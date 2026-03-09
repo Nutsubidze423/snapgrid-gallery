@@ -25,7 +25,7 @@ export default function Home() {
     <div className="min-h-screen bg-slate-900 text-gray-100 p-6">
       <h1 className="text-2xl font-bold mb-6">SnapGrid Gallery</h1>
       <Upload onUpload={addImage} />
-      <Gallery images={images} onDelete={deleteImage} />
+      <Gallery images={images} onDelete={deleteImage} onSelect={setLightbox} />
       <Lightbox image={lightbox} onClose={() => setLightbox(null)} />
     </div>
   )
