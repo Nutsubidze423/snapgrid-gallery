@@ -1,10 +1,10 @@
 'use client'
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 
 export default function Upload({ onUpload }) {
   const [drag, setDrag] = useState(false)
 
-  const handleFiles = (files) => {
+  const handleFiles = useCallback((files) => {
     Array.from(files).forEach(file => {
       if (!file.type.startsWith('image/')) return
       const reader = new FileReader()
@@ -13,7 +13,7 @@ export default function Upload({ onUpload }) {
       }
       reader.readAsDataURL(file)
     })
-  }
+  }, [onUpload])
 
   return (
     <div
