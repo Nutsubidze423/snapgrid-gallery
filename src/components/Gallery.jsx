@@ -26,10 +26,13 @@ export default function Gallery({ images, onDelete, onSelect }) {
           </button>
         ))}
       </div>
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.map(img => (
-          <div key={img.id} className="relative group mb-4 break-inside-avoid cursor-pointer" onClick={() => onSelect(img)}>
-            <img src={img.url} alt={img.caption} className="w-full rounded-lg shadow hover:opacity-90 transition" loading="lazy" />
+          <div key={img.id} className="relative group cursor-pointer" onClick={() => onSelect(img)}>
+            <img src={img.url} alt={img.caption} className="w-full h-64 object-cover rounded-lg shadow hover:opacity-90 transition" loading="lazy" />
+            <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition">
+              <p className="text-white text-sm truncate">{img.caption}</p>
+            </div>
             <button onClick={(e) => { e.stopPropagation(); onDelete(img.id) }} className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-6 h-6 opacity-0 group-hover:opacity-100">×</button>
           </div>
         ))}
