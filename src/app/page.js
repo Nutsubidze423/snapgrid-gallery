@@ -22,7 +22,7 @@ export default function Home() {
   const deleteImage = (id) => setImages(images.filter(i => i.id !== id))
 
   return (
-    <div className="min-h-screen bg-slate-900 text-gray-100 p-6">
+    <div className="min-h-screen bg-slate-900 text-gray-100 p-4 md:p-6">
       <h1 className="text-2xl font-bold mb-6">SnapGrid Gallery</h1>
       <Upload onUpload={addImage} />
       <Gallery images={images} onDelete={deleteImage} onSelect={setLightbox} />
