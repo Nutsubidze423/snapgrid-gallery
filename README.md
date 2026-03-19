@@ -16,3 +16,4 @@ npm run dev
 - Tag filtering
 - Lightbox with captions
 - localStorage persistence
+# routine update 2026-03-19
