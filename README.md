@@ -17,3 +17,4 @@ npm run dev
 - Lightbox with captions
 - localStorage persistence
 # routine update 2026-03-19
+# routine update 2026-03-20
