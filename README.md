@@ -1,29 +1,41 @@
 # SnapGrid Gallery
 
-A Next.js image gallery with drag-drop upload, masonry/grid layout, lightbox, and tag filtering.
-
-## Setup
-
-```bash
-npm install
-npm run dev
-```
+A vanilla JavaScript image gallery with drag-and-drop upload, masonry layout, lightbox preview, and tag-based filtering.
 
 ## Features
 
-- Drag & drop upload
-- Grid/masonry layout
-- Tag filtering
-- Lightbox with captions
-- localStorage persistence
-# routine update 2026-03-19
-# routine update 2026-03-20
-# routine update 2026-03-21
-# routine update 2026-03-23
-# routine update 2026-03-24
-# routine update 2026-03-25
-# routine update 2026-03-26
-# routine update 2026-03-28
-# routine update 2026-03-30
-# routine update 2026-03-31
-# routine update 2026-03-06
+- Drag and drop image uploads
+- Masonry grid layout
+- Lightbox image viewer
+- Filter images by tags
+- Fully client-side, no backend required
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+## Getting Started
+
+Open `index.html` in your browser, or serve the folder with any static server:
+
+```bash
+npx serve .
+```
+
+## Project Structure
+
+```
+css/
+  style.css
+js/
+  app.js
+  gallery.js
+  upload.js
+index.html
+```
+
+## License
+
+MIT
